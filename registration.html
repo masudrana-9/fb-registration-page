@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up for Facebook</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-logo">
+            <img src="/img/logo.svg" alt="">
+        </header>
+        <main>
+            <form action="">
+                <div class="form-header">
+                    <h2>Create a new account</h2>
+                    <p>It's quick and easy.</p>
+                </div>
+                <hr/>
+                
+                <div class="form-body">
+                    <div class="form-group">
+                        <div class="fullname-input">
+                            <input type="text" name="firstname" placeholder="First name">
+                            <input type="text" name="surname" placeholder="Surname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p>Date of birth</p>
+                        <div class="date-birth">
+                            <select name="birth-day" id="day">
+                            
+                            </select>
+                            <select name="" id="month">
+                                
+                            </select>
+                            <select name="" id="year">
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p>Gender</p>
+                        <div class="gender-field">
+                            <label for="male">Male
+                                <input type="radio" name="sex" id="male" value="1">
+                            </label>
+                            <label for="female">Female
+                                <input type="radio" name="sex" id="female" value="2">
+                            </label>
+                            <label for="others">Other
+                                <input type="radio" name="sex" id="others" value="2">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Mobile number or email address">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                    
+                    <p>People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more.</a></p>
+                    <p>By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+
+                    <button>Sign Up</button>
+                    <a class="exists-account-text" href="#">Already have an account?</a>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <div class="list-items">
+            <ul>
+                <li>English (UK)</li>
+                <li><a href="#">বাংলা</a></li>
+                <li><a href="#">অসমীয়া</a></li> 
+                <li><a href="#">हिन्दी</a></li>
+                <li><a href="#">नेपाली</a></li>
+                <li><a href="#">Bahasa Indonesia</a></li>
+                <li><a href="#">العربية</a></li>
+                <li><a href="#">中文(简体)</a></li>
+                <li><a href="#">Bahasa Melayu</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Português (Brasil)</a></li>
+                <li><a href="#">+</a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="copyright">
+            <span>Meta © 2024</span>
+        </div>
+    </footer>
+
+
+    <script>
+
+        function genarateDayOption() {
+            let days = 31
+            let day = document.getElementById('day')
+            let optionValue = ''
+            for(let i = 1; i <= days ; i ++) {
+                optionValue += `<option value="${i}">${i} </option>`
+            }
+            day.innerHTML = optionValue
+        }
+
+        genarateDayOption()
+
+        function genarateMonthOption() {
+            let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            let month = document.getElementById('month')
+            let optionValue = ''
+            for (let i = 0 ; i < months.length; i++) {
+                const element = months[i];
+                optionValue += `<option value="${element}">${element}</option>`
+            }
+            month.innerHTML = optionValue
+        }
+
+        genarateMonthOption()
+
+        function genarateYearOption() {
+            let years = ['2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013']
+            let year = document.getElementById('year')
+            let optionValue = ''
+            for (let i = 0 ; i < years.length; i++) {
+                const element = years[i];
+                optionValue += `<option value="${element}">${element}</option>`
+            }
+            year.innerHTML = optionValue
+        }
+
+        genarateYearOption()
+        
+    </script>
+</body>
+</html>
